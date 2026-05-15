@@ -1,26 +1,50 @@
 {
-  "name": "classificados",
+  "name": "axaki",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint"
+    "build": "nest build",
+    "start": "nest start",
+    "dev": "nest start --watch",
+    "start:debug": "nest start --debug --watch",
+    "start:prod": "node dist/main",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:cov": "jest --coverage",
+    "lint": "eslint src/**/*.ts"
   },
   "dependencies": {
-    "next": "16.2.5",
-    "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "@neondatabase/serverless": "^1.1.0",
+    "@nestjs/common": "^11.1.21",
+    "@nestjs/core": "^11.1.21",
+    "@nestjs/platform-express": "^11.0.0",
+    "bcryptjs": "^3.0.3",
+    "cookie-parser": "^1.4.7",
+    "drizzle-orm": "^0.45.2",
+    "hbs": "^4.2.1",
+    "jose": "^6.2.3",
+    "reflect-metadata": "^0.2.2",
+    "rxjs": "^7.8.0",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
+    "@eslint/js": "^9",
+    "@nestjs/cli": "^11.0.0",
+    "@nestjs/schematics": "^11.0.0",
+    "@nestjs/testing": "^11.0.0",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/cookie-parser": "^1.4.10",
+    "@types/express": "^5.0.6",
+    "@types/jest": "^30.0.0",
+    "@types/node": "20.19.9",
+    "dotenv": "^17.4.2",
+    "drizzle-kit": "^0.31.10",
     "eslint": "^9",
-    "eslint-config-next": "16.2.5",
-    "tailwindcss": "^4",
-    "typescript": "^5"
+    "jest": "^30.0.2",
+    "prettier": "~3.6.2",
+    "ts-jest": "^29.4.0",
+    "ts-node": "10.9.1",
+    "typescript": "~5.5.4",
+    "typescript-eslint": "^8.59.3"
   }
 }

@@ -1,36 +1,52 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Axaki 🍊
 
-## Getting Started
+## Visão Geral
 
-First, run the development server:
+O **Axaki** é uma plataforma integrada de **Classificados Digitais** e **Quadro de Avisos Digital**, concebida com um foco profundo em geolocalização e segmentação comunitária. O projeto visa fortalecer os laços locais, permitindo que ruas, bairros e cidades funcionem como comunidades vibrantes e autossuficientes.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Propósito e Missão
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Engajamento Local:** Conectar vizinhos e promover a sensação de união.
+- **Qualidade de Vida:** Facilitar o acesso a serviços e informações próximas, reduzindo deslocamentos e fortalecendo a economia local.
+- **Compartilhamento de Recursos:** Plataforma para troca de conhecimentos, habilidades e recursos materiais dentro da própria comunidade.
+- **Segmentação Geográfica:** Organização granular por Rua > Bairro > Cidade, garantindo que a informação seja sempre relevante para quem a recebe.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Pilares Técnicos
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Frontend/Fullstack:** [Next.js](https://nextjs.org/) (App Router, TypeScript).
+- **Estilização:** Tailwind CSS / Vanilla CSS.
+- **Banco de Dados:** PostgreSQL (Hospedado no [Neon](https://neon.tech/)) com [Drizzle ORM](https://orm.drizzle.team/).
+- **Autenticação:** JWT (JSON Web Token) com controle de acesso baseado em Roles.
+- **Validação:** [Zod](https://zod.dev/) para integridade de dados de ponta a ponta.
 
-## Learn More
+## Estrutura de Localização
 
-To learn more about Next.js, take a look at the following resources:
+A plataforma é segmentada hierarquicamente:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Rua:** O nível mais próximo, para avisos de vizinhança imediata.
+2. **Bairro:** Notícias locais, pequenos comércios e eventos comunitários.
+3. **Cidade:** Visão macro de classificados e utilidade pública.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Começando
 
-## Deploy on Vercel
+### Pré-requisitos
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Node.js (versão LTS recomendada)
+- Instância PostgreSQL (Neon sugerido)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Instalação
+
+1. Clone o repositório.
+2. Instale as dependências:
+   ```bash
+   npm install
+   ```
+3. Configure o arquivo `.env` (veja `.env.example`).
+4. Execute o servidor de desenvolvimento:
+   ```bash
+   npm run dev
+   ```
+
+## Contribuição
+
+Consulte o arquivo `GEMINI.md` para diretrizes de desenvolvimento e padrões arquiteturais.
